@@ -1,13 +1,20 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nabvar from "./components/Nabvar";
+import Home from "./page/Home";
+import History from "./page/History";
+import AutofaceAuthentygation from "./page/AutofaceAuthentygation";
 import FaceDetection from "./FaceDetection";
-import { BrowserRouter } from "react-router-dom";
-
 
 function App() {
   return (
-    <BrowserRouter>
-      <FaceDetection/>
-    </BrowserRouter>
+    <Router>  
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/History" element={<History />} />
+        <Route path="/AutofaceAuthentygation" element={<AutofaceAuthentygation />} />
+      </Routes>
+    </Router>
   );
 }
 
