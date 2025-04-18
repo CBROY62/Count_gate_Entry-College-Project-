@@ -7,3 +7,4 @@ const ObjectHuman = [
     { label: "Ashima Arora", imagePath: "/images/ashima.jpg" },
 ]
 export default ObjectHuman
+
