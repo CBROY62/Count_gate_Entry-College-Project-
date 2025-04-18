@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
 import persons from "./DataJson/human";
 import Nabvar from "./components/Nabvar";
+import camera from '../public/images/camera-cam.gif'
 
 const FaceRecognition = () => {
   const videoRef = useRef(null);
@@ -131,22 +132,19 @@ const FaceRecognition = () => {
   }, [faceMatcher]);
 
   return (
-    <>
+    <div className=" bg-linear-to-bl from-[#08FDC7] to-[#07DFF7]">
       <Nabvar />
-      <h2 className="text-center text-3xl sm:text-4xl m-6 font-serif text-red-500 underline bg-green-400 p-2 rounded-2xl shadow-xl">
-        🎥 Face Recognition System
-      </h2>
-
+     
       {/* Responsive Video Section */}
-      <div className="flex flex-col md:flex-row items-center gap-6 p-6 bg-green-200">
-        <div className="relative ">
+      <div className="flex flex-col md:flex-row items-center gap-6 p-6 ">
+        <div className="relative  ">
           <video
             ref={videoRef}
             autoPlay
             muted
-            className="border w-[90vw] max-w-[700px] h-[400px] rounded-md shadow-xl"
+            className="border border-solid border-[#fff] w-[90vw] max-w-[700px] h-[400px] rounded-md shadow-xl/20"
           />
-          <div className="absolute top-0 left-0 w-full p-2 bg-black bg-opacity-60 text-white text-center text-base sm:text-lg rounded-md">
+          <div className="absolute top-0 left-0 w-full p-2 bg-[#F70761] bg-opacity-60 text-white text-center text-base sm:text-lg rounded-md">
             {currentMatches.length > 0 ? (
               currentMatches.map((match, index) => (
                 <div key={index}>
@@ -159,7 +157,9 @@ const FaceRecognition = () => {
           </div>
           
         </div>
-                    <div className=" h-[400px] w-[90vw] border text-red-500"> this </div>
+        <div className=" hidden md:block h-[400px] w-[90vw]  border border-solid border-[#fff] w-full shadow-xl/20   bg-opacity-60  text-center  rounded-md "> 
+        <img src={camera} alt="camera detection" className=" top-[-100px] m-10 absolute  " />
+         </div>
       </div>
 
       {/* Responsive Stats Section */}
@@ -187,7 +187,7 @@ const FaceRecognition = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
