@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
 import persons from "./DataJson/human";
+import Nabvar from "./components/Nabvar";
 
+
+ 
 const FaceRecognition = () => {
   const videoRef = useRef(null);
   const [totalEntries, setTotalEntries] = useState(0);
@@ -123,6 +126,7 @@ const FaceRecognition = () => {
 
   return (
     <>
+      <Nabvar />
       <h2 className="text-center text-4xl m-6 font-serif text-red-500 underline bg-green-400 p-2 rounded-2xl shadow-xl">
         🎥 Face Recognition System
       </h2>
