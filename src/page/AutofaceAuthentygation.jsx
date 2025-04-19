@@ -1,6 +1,7 @@
 
 import Nabvar from '../components/Nabvar'
 import React, { useState, useRef, useEffect } from 'react';
+import Footer from '../components/Footer';
 
 const AutofaceAuthentygation = () => {
   const videoRef = useRef(null);
@@ -31,7 +32,8 @@ const AutofaceAuthentygation = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <>
+    <div className="bg-gray-100 min-h-screen" style={{ background: "linear-gradient(135deg, #74ebd5, #cbbdab)"}}>
       {/* Navbar */}
       <Nabvar/>
 
@@ -75,6 +77,8 @@ const AutofaceAuthentygation = () => {
         </div>
       </main>
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
 import persons from "./DataJson/human";
 import Nabvar from "./components/Nabvar";
+import Footer from "./components/Footer";
 
 
  
@@ -156,6 +157,8 @@ const FaceRecognition = () => {
           </ul>
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 };
