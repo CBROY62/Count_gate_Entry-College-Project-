@@ -128,18 +128,18 @@ const FaceRecognition = () => {
   return (
     <>
       <Nabvar />
-      <h2 className="text-center text-4xl m-6 font-serif text-red-500 underline bg-green-400 p-2 rounded-2xl shadow-xl">
+      <h2 className="text-center text-4xl m-6 font-serif text-red-500 underline bg-green-400 p-2 rounded-2xl shadow-xl" style={{ background:" linear-gradient(135deg, #568c99, #e3a4d1)"}}>
         🎥 Face Recognition System
       </h2>
-      <div className="flex gap-[200px] p-[50px] bg-green-200 sticky">
+      <div className="flex gap-[200px] p-[50px] bg-green-200 sticky" style={{ background:" linear-gradient(135deg, #568c99, #e3a4d1)"}}>
         <video ref={videoRef} autoPlay muted className="border w-[900px] rounded-md shadow-xl" />
       </div>
-      <div className="flex justify-evenly p-5">
-        <div className="bg-amber-400 p-8 rounded-xl shadow">
+      <div className="flex justify-evenly p-5" style={{ background:" linear-gradient(135deg,rgb(169, 239, 217),rgb(198, 139, 210))"}}>
+        <div className="bg-amber-400 p-8 rounded-xl shadow" style={{ background:" linear-gradient(135deg,rgb(169, 239, 217),rgb(198, 139, 210))"}}>
           <h3 className="text-4xl">📊 Total Unique Entries: {totalEntries}</h3>
-          <h3 className="text-xl text-red-600">❌ Unknown Persons: {unknownPeople.length}</h3>
+          <h3 className="text-xl text-red-600" >❌ Unknown Persons: {unknownPeople.length}</h3>
         </div>
-        <div className="flex flex-col gap-10 p-8 shadow-2xl rounded-xl">
+        <div className="flex flex-col gap-10 p-8 shadow-2xl rounded-xl" >
           <h3 className="text-2xl text-center font-serif text-lime-600">
             📌 Per-Person Entry Counts:
           </h3>
